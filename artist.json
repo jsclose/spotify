@@ -1,0 +1,192 @@
+{
+    "directed": false, 
+    "graph": {}, 
+    "nodes": [
+        {
+            "popularity": 90, 
+            "followers": 7236812, 
+            "id": "Maroon 5"
+        }, 
+        {
+            "popularity": 77, 
+            "followers": 1444369, 
+            "id": "Jason Mraz"
+        }, 
+        {
+            "popularity": 84, 
+            "followers": 2154167, 
+            "id": "OneRepublic"
+        }, 
+        {
+            "popularity": 74, 
+            "followers": 502083, 
+            "id": "Kodaline"
+        }, 
+        {
+            "popularity": 64, 
+            "followers": 256553, 
+            "id": "Stereophonics"
+        }, 
+        {
+            "popularity": 80, 
+            "followers": 3095455, 
+            "id": "Mumford & Sons"
+        }, 
+        {
+            "popularity": 75, 
+            "followers": 1042969, 
+            "id": "The Fray"
+        }, 
+        {
+            "popularity": 74, 
+            "followers": 727976, 
+            "id": "James Blunt"
+        }, 
+        {
+            "popularity": 71, 
+            "followers": 673043, 
+            "id": "Snow Patrol"
+        }, 
+        {
+            "popularity": 76, 
+            "followers": 1718728, 
+            "id": "The Script"
+        }, 
+        {
+            "popularity": 61, 
+            "followers": 198053, 
+            "id": "Travis"
+        }, 
+        {
+            "popularity": 78, 
+            "followers": 1133261, 
+            "id": "Oasis"
+        }, 
+        {
+            "popularity": 75, 
+            "followers": 1468988, 
+            "id": "Train"
+        }, 
+        {
+            "id": "Coldplay"
+        }, 
+        {
+            "popularity": 79, 
+            "followers": 1792560, 
+            "id": "The Killers"
+        }, 
+        {
+            "popularity": 87, 
+            "followers": 3653350, 
+            "id": "Imagine Dragons"
+        }, 
+        {
+            "popularity": 82, 
+            "followers": 1954591, 
+            "id": "John Mayer"
+        }, 
+        {
+            "popularity": 82, 
+            "followers": 1621719, 
+            "id": "Kings of Leon"
+        }, 
+        {
+            "popularity": 70, 
+            "followers": 636901, 
+            "id": "Keane"
+        }, 
+        {
+            "popularity": 77, 
+            "followers": 1523790, 
+            "id": "U2"
+        }, 
+        {
+            "popularity": 78, 
+            "followers": 2377400, 
+            "id": "Muse"
+        }
+    ], 
+    "links": [
+        {
+            "source": 0, 
+            "target": 13
+        }, 
+        {
+            "source": 1, 
+            "target": 13
+        }, 
+        {
+            "source": 2, 
+            "target": 13
+        }, 
+        {
+            "source": 3, 
+            "target": 13
+        }, 
+        {
+            "source": 4, 
+            "target": 13
+        }, 
+        {
+            "source": 5, 
+            "target": 13
+        }, 
+        {
+            "source": 6, 
+            "target": 13
+        }, 
+        {
+            "source": 7, 
+            "target": 13
+        }, 
+        {
+            "source": 8, 
+            "target": 13
+        }, 
+        {
+            "source": 9, 
+            "target": 13
+        }, 
+        {
+            "source": 10, 
+            "target": 13
+        }, 
+        {
+            "source": 11, 
+            "target": 13
+        }, 
+        {
+            "source": 12, 
+            "target": 13
+        }, 
+        {
+            "source": 13, 
+            "target": 14
+        }, 
+        {
+            "source": 13, 
+            "target": 15
+        }, 
+        {
+            "source": 13, 
+            "target": 16
+        }, 
+        {
+            "source": 13, 
+            "target": 17
+        }, 
+        {
+            "source": 13, 
+            "target": 18
+        }, 
+        {
+            "source": 13, 
+            "target": 19
+        }, 
+        {
+            "source": 13, 
+            "target": 20
+        }
+    ], 
+    "multigraph": false
+}

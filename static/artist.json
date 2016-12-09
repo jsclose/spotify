@@ -1,0 +1,192 @@
+{
+    "directed": false, 
+    "graph": {}, 
+    "nodes": [
+        {
+            "popularity": 64, 
+            "followers": 161614, 
+            "id": "Ab-Soul"
+        }, 
+        {
+            "popularity": 61, 
+            "followers": 80300, 
+            "id": "Casey Veggies"
+        }, 
+        {
+            "popularity": 68, 
+            "followers": 323245, 
+            "id": "Earl Sweatshirt"
+        }, 
+        {
+            "popularity": 77, 
+            "followers": 269729, 
+            "id": "Pusha T"
+        }, 
+        {
+            "popularity": 86, 
+            "followers": 543550, 
+            "id": "Travis Scott"
+        }, 
+        {
+            "popularity": 71, 
+            "followers": 175588, 
+            "id": "Vince Staples"
+        }, 
+        {
+            "popularity": 64, 
+            "followers": 88563, 
+            "id": "Mick Jenkins"
+        }, 
+        {
+            "popularity": 67, 
+            "followers": 123923, 
+            "id": "Vic Mensa"
+        }, 
+        {
+            "popularity": 73, 
+            "followers": 342058, 
+            "id": "Joey Bada$$"
+        }, 
+        {
+            "popularity": 66, 
+            "followers": 196794, 
+            "id": "Danny Brown"
+        }, 
+        {
+            "popularity": 85, 
+            "followers": 1414275, 
+            "id": "A$AP Rocky"
+        }, 
+        {
+            "popularity": 58, 
+            "followers": 41093, 
+            "id": "Domo Genesis"
+        }, 
+        {
+            "id": "Childish Gambino"
+        }, 
+        {
+            "popularity": 70, 
+            "followers": 117257, 
+            "id": "Isaiah Rashad"
+        }, 
+        {
+            "popularity": 73, 
+            "followers": 782284, 
+            "id": "Tyler, The Creator"
+        }, 
+        {
+            "popularity": 80, 
+            "followers": 1356911, 
+            "id": "Mac Miller"
+        }, 
+        {
+            "popularity": 84, 
+            "followers": 855059, 
+            "id": "Chance The Rapper"
+        }, 
+        {
+            "popularity": 56, 
+            "followers": 257810, 
+            "id": "Odd Future"
+        }, 
+        {
+            "popularity": 75, 
+            "followers": 207879, 
+            "id": "Anderson .Paak"
+        }, 
+        {
+            "popularity": 93, 
+            "followers": 2885291, 
+            "id": "Kendrick Lamar"
+        }, 
+        {
+            "popularity": 84, 
+            "followers": 1745849, 
+            "id": "Frank Ocean"
+        }
+    ], 
+    "links": [
+        {
+            "source": 0, 
+            "target": 12
+        }, 
+        {
+            "source": 1, 
+            "target": 12
+        }, 
+        {
+            "source": 2, 
+            "target": 12
+        }, 
+        {
+            "source": 3, 
+            "target": 12
+        }, 
+        {
+            "source": 4, 
+            "target": 12
+        }, 
+        {
+            "source": 5, 
+            "target": 12
+        }, 
+        {
+            "source": 6, 
+            "target": 12
+        }, 
+        {
+            "source": 7, 
+            "target": 12
+        }, 
+        {
+            "source": 8, 
+            "target": 12
+        }, 
+        {
+            "source": 9, 
+            "target": 12
+        }, 
+        {
+            "source": 10, 
+            "target": 12
+        }, 
+        {
+            "source": 11, 
+            "target": 12
+        }, 
+        {
+            "source": 12, 
+            "target": 13
+        }, 
+        {
+            "source": 12, 
+            "target": 14
+        }, 
+        {
+            "source": 12, 
+            "target": 15
+        }, 
+        {
+            "source": 12, 
+            "target": 16
+        }, 
+        {
+            "source": 12, 
+            "target": 17
+        }, 
+        {
+            "source": 12, 
+            "target": 18
+        }, 
+        {
+            "source": 12, 
+            "target": 19
+        }, 
+        {
+            "source": 12, 
+            "target": 20
+        }
+    ], 
+    "multigraph": false
+}

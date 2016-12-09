@@ -9,9 +9,18 @@
 
 <body>
 <h1> Related Artist Network </h1>
-
+<h2>Enter an Artist you wish to explore.</h2>
+    <form action="/" method="POST">
+        <input type="text" name="text">
+        <input type="submit" name="my-form" value="Send">
+    </form>
 
     <script type="text/javascript">
+
+
+
+
+
     /* Set the diagrams Height & Width */
     var h = 800,
         w = 1000;
@@ -20,8 +29,10 @@
         .append("svg")
         .attr("height", h)
         .attr("width", w);
-    d3.json("spotify/kanye.json", function(json) {
+    d3.json("/static/artist.json", function(json) {
         /* Draw the node labels first */
+        console.log(json);
+
         var texts = svg.selectAll("text")
             .data(json.nodes)
             .enter()
@@ -59,14 +70,7 @@
             })
             .attr("opacity", 0.5)
             .style("fill", function(d, i) {
-                 return d.popularity > 1000 ? '#800026' :
-               d.popularity > 90  ? '#BD0026' :
-               d.popularity > 80  ? '#E31A1C' :
-               d.popularityd > 70  ? '#FC4E2A' :
-               d.popularity > 60   ? '#FD8D3C' :
-               d.popularity > 50   ? '#FEB24C' :
-               d.popularity > 40   ? '#FED976' :
-               '#FFEDA0';
+               return color(i)
             })
             .call(force.drag)
              .on('dblclick', connectedNodes); //Added code 
