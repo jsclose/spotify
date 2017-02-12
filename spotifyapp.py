@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request
+from flask import *
 from spotify import nameToId, generateData
 
 
@@ -6,21 +6,28 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+
 	return render_template('spotifyindex.html')
 	#return make_respone(open('templates/spotifyindex.html').read())
 
 
-@app.route('/', methods=['POST'])
-def my_form_post():
-
-    text = request.form['text']
-    artistId = nameToId(text)
+@app.route('/api/v1/related_artist', methods=['POST', 'GET'])
+def generate_related_artist_network():
+    #text = request.form['text']
+    print("getting")
+    #name = "Jack Johnson"
+    name = request.args.get('artist_name')
+    print(name)
+    if not name:
+        name = "Jack Johnson"
+    artistId = nameToId(name)
     print(artistId)
-    return generateData(artistId)
-    #return render_template('spotifyindex.html') 
+    #return generateData(artistId)
+    return jsonify(generateData(artistId))
+    
     
 
 if __name__ == '__main__':
 	app.run(host='127.0.0.1', port =5000)
-	url_for('static', filename='kanye.json')
+	#url_for('static', filename='artist.json')
 

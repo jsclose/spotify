@@ -1,42 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
+$(function () {
+   
+	$("#get_network").click(get_related_artist);
 
-<head>
-  <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
-    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"> </script>
-    <script type="text/javascript" src="/static/related.js"> </script>
+/*
+	$("#get_network").on('click', function(){
+		$artist_name = $("#artist").val();
+		get_related_artist(artist_name);
 
-</head>
+	});
+*/
 
-<body>
-<h1> Related Artist Network </h1>
-<h2>Enter an Artist you wish to explore.</h2>
-
-    <div class = user_form> 
-    <input type="text" name="text" id = "artist">
-    <input type="submit" id="get_network" value="Send">
-    </div>
-
-    <script type="text/javascript">
+});
 
 
 
 
+function get_related_artist(artist_name){
+	$artist_name = $("#artist").val();
+	
 
-    /* Set the diagrams Height & Width */
-    
-    var h = 800,
-        w = 1000;
-    var color = d3.scale.category20();
-    var svg = d3.select("body")
-        .append("svg")
-        .attr("height", h)
-        .attr("width", w);
+    $.ajax({
+        url: "/api/v1/related_artist",
+        type: 'GET',
+        contentType: "application/json",
+        data: {artist_name : $artist_name},
+        dataType: 'json',
+        //data : JSON.stringify(),
+        success: function (data) {
+        	
+            console.log("Pass");
+            console.log(data);
 
-    d3.json("/api/v1/related_artist", function(json) {
+            display_network(data);
+            //need way to remeber most recent url
+           
+           
+
+        },
+        error: function (data) {
+            console.log(data);
+
+        }
+    });
+
+
+};
+
+
+
+
+
+function display_network(json){
+
+    //Remove preivous SVG
+    svg.selectAll("*").remove()
         /* Draw the node labels first */
-        console.log(json)
+
 
         var texts = svg.selectAll("text")
             .data(json.nodes)
@@ -145,7 +164,7 @@ function connectedNodes() {
     }
 }
 
-});
+};
 
 
 
@@ -153,7 +172,5 @@ function connectedNodes() {
 
 
 
-    </script>
-</body>
 
-</html>
+

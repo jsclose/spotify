@@ -87,11 +87,11 @@ def generateData(artistID):
 
 
 	data = json_graph.node_link_data(Z)
+	#return data
 	return data
-	'''
-	with open('static/artist.json', 'w') as outfile:
-		json.dump(data, outfile, indent=4)
-	'''
+	#with open('static/artist.json', 'w') as outfile:
+	#	json.dump(data, outfile, indent=4)
+	
 
 
 ArtistArray = []
