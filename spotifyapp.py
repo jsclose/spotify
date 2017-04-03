@@ -28,6 +28,6 @@ def generate_related_artist_network():
     
 
 if __name__ == '__main__':
-	app.run(host='127.0.0.1', port =5000)
+	app.run(host='0.0.0.0', port =3000)
 	#url_for('static', filename='artist.json')
 

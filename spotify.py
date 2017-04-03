@@ -4,7 +4,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from networkx.readwrite import json_graph
 
-oAuth = "BQAuxE9cRk63sb4e9sOKG1YHFo8aqebEjDTH_XHNy3g1Fb"
+oAuth = "BQAWQWmBGzQ9xbD5fXSIUnriKLXU8UFJXO49nqrEQvm5Ol6cScrhfSYY_F0FZg8sVhmkMlLN9qn9Mcu83Ud5vcJ435aK8DcTwODjJawDt9J1UoyiVdMLgFHUpClRZcHuBwogggpLPWASxf9JMzFadjOSHsq-NQk"
 url = "https://api.spotify.com/v1/artists/0JDkhL4rjiPNEp92jAgJnS/related-artists"
 
 
@@ -36,15 +36,31 @@ class Artist:
 
 
 def createGraph(artist, graph):
+	print("Creating graph from:" + artist.name)
 	for relatedID in artist.related_artists:
 	#create a new artist
 	     related_artist = Artist(relatedID)
+	     print("Adding related Artist" + related_artist.name)
 	     graph.add_node(related_artist.name, popularity = related_artist.popularity, followers = related_artist.followers)
 	     graph.add_edge(artist.name, related_artist.name)
 	     
 
 
 	return graph
+
+
+def createGraphFromID(artist, graph):
+	
+	#create a new artist
+	related_artist = artist
+	graph.add_node(related_artist.name, popularity = related_artist.popularity, followers = related_artist.followers)
+	graph.add_edge(artist.name, related_artist.name)
+	     
+
+
+	return graph
+
+
 
 
 def nameToId(name):
@@ -66,7 +82,7 @@ def generateData(artistID):
 	Z = nx.Graph()
 	searchArtist = Artist(artistID)
 	Z = createGraph(searchArtist, Z)
-	'''
+	ArtistArray = []
 	ArtistArray.append(searchArtist)
 
 	for iD in searchArtist.related_artists:
@@ -75,15 +91,18 @@ def generateData(artistID):
 		ArtistArray.append(test)
 		Z = createGraph(test, Z)
 
-
+	
 	
 	for artist in ArtistArray:
-		for iD in artist.related_artists:
-			newArtist = Artist(iD)
-			print(newArtist.name)
-			ArtistArray.append(newArtist)
-			Z = createGraph(newArtist, Z, 'red')
-	'''
+		print("Going through artist Array:" + artist.name)
+		#for iD in artist.related_artists:
+
+			#cnewArtist = Artist(iD)
+			#print(newArtist.name)
+
+			#ArtistArray.append(newArtist)
+		Z = createGraph(artist, Z)
+	
 
 
 	data = json_graph.node_link_data(Z)
@@ -93,7 +112,7 @@ def generateData(artistID):
 	#	json.dump(data, outfile, indent=4)
 	
 
-
+'''
 ArtistArray = []
 
 
@@ -129,7 +148,7 @@ generateData(artistID)
 
 ArtistArray.append(kanye)
 createGraph(kanye, Z)
-'''
+
 for iD in kanye.related_artists:
 	test = Artist(iD)
 	ArtistArray.append(test)
